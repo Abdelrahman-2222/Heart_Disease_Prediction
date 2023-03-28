@@ -152,6 +152,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Or allow specific origins
 
 CORS_ORIGIN_WHITELIST = [
+    "https://heart-disease-prediction-webs.herokuapp.com",
     "http://127.0.0.1:3000",
     "http://127.0.0.1",
     "http://localhost:3000",
