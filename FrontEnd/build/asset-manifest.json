@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/heart-disease-prediction-webs.herokuapp.com/static/css/main.635c3f56.css",
+    "main.js": "/heart-disease-prediction-webs.herokuapp.com/static/js/main.0f5e1a5d.js",
+    "index.html": "/heart-disease-prediction-webs.herokuapp.com/index.html",
+    "main.635c3f56.css.map": "/heart-disease-prediction-webs.herokuapp.com/static/css/main.635c3f56.css.map",
+    "main.0f5e1a5d.js.map": "/heart-disease-prediction-webs.herokuapp.com/static/js/main.0f5e1a5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.635c3f56.css",
+    "static/js/main.0f5e1a5d.js"
+  ]
+}
