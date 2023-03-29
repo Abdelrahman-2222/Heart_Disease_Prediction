@@ -1,7 +1,6 @@
 {
   "name": "cardiovision",
   "version": "0.1.0",
-  "homepage": "heart-disease-prediction-webs.herokuapp.com",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -28,13 +27,15 @@
     "styled-components": "^5.3.8",
     "web-vitals": "^3.1.1"
   },
-    "scripts": {
+  "scripts": {
     "start": "cd FrontEnd && npm start",
     "build": "cd FrontEnd && npm run build",
     "test": "cd FrontEnd && npm test",
-    "eject": "cd FrontEnd && npm eject"
+    "eject": "cd FrontEnd && npm eject",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "npm start --prefix frontend",
+    "backend": "python manage.py runserver"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -54,8 +55,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^8.0.0",
     "react-scripts": "^5.0.1"
   }
 }
-
-

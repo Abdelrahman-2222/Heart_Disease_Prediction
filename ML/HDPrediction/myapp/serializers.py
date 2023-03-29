@@ -1,22 +1,21 @@
 from ML.HDPrediction.myapp.models import HeartDisease
 from rest_framework import serializers
+from .models import Task
 
 
 class HeartSerializer(serializers.ModelSerializer):
-    result = serializers.SerializerMethodField()
-    submitted_time = serializers.SerializerMethodField()
+    result = serializers.BooleanField(read_only=True)
+    submitted_time = serializers.DateTimeField(format="%d %b %Y %H:%M:%S", read_only=True)
+
+    # submitted_time = serializers.SerializerMethodField()
 
     class Meta:
         model = HeartDisease
-        fields = ['first_name', 'last_name', 'HighBP', 'HighChol', 'CholCheck', 'BMI', 'Smoker', 'Stroke', 'Diabetes',
-                  'PhysActivity', 'Fruits', 'Veggies', 'HvyAlcoholConsump', 'AnyHealthcare', 'NoDocbcCost', 'GenHlth',
-                  'MentHlth', 'PhysHlth', 'DiffWalk', 'Sex', 'Age', 'Education', 'Income', 'result', 'submitted_time']
-
-    def get_result(self, obj):
-        return obj.result
-
-    def get_submitted_time(self, obj):
-        return obj.submitted_time.strftime('%d %b %Y')
+        # fields = '__all__'
+        fields = (
+        'id', 'first_name', 'last_name', 'HighBP', 'HighChol', 'CholCheck', 'BMI', 'Smoker', 'Stroke', 'Diabetes',
+        'PhysActivity', 'Fruits', 'Veggies', 'HvyAlcoholConsump', 'AnyHealthcare', 'NoDocbcCost', 'GenHlth',
+        'MentHlth', 'PhysHlth', 'DiffWalk', 'Sex', 'Age', 'Education', 'Income', 'result', 'submitted_time')
 
 
 class HeartSerializerList(serializers.ModelSerializer):
@@ -32,3 +31,9 @@ class HeartSerializerList(serializers.ModelSerializer):
 
     def get_submitted_time(self, obj):
         return obj.submitted_time.strftime('%d %b %Y')
+
+
+class TaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = '__all__'

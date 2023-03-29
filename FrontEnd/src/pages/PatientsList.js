@@ -11,7 +11,7 @@ const PatientsList = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:8000/api/submit-form/');
+            const response = await fetch('http://localhost:8000/api/flist/');
             const data = await response.json();
             const modifiedData = data.map((item) => ({
                 ...item,
@@ -171,7 +171,7 @@ const PatientsList = () => {
                     </tbody>
                 </Table>
             </div>
-            <Button className='my-button' href='/add-patient'>Add Patient</Button>
+            <Button className='my-button' href='/form'>Add Patient</Button>
 
         </div>
     );

@@ -15,7 +15,7 @@ import os
 from django.test.runner import DiscoverRunner
 from pathlib import Path
 
-import django_heroku
+# import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6_v_*53b4(kk)$a3sdu&1broc6e(+oqysc2$&yp3icvnva7ggj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['*',
-                 'heart-disease-prediction-webs.herokuapp.com',
+                 # 'heart-disease-prediction-webs.herokuapp.com',
                  "http://127.0.0.1:3000",
                  "http://127.0.0.1",
                  "http://localhost:3000",
@@ -65,10 +66,10 @@ ROOT_URLCONF = 'HDPrediction.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [],
-        # 'APP_DIRS': True,
-        'APP_DIRS': False,
-        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'build')],
+        'DIRS': [],
+        'APP_DIRS': True,
+        # 'APP_DIRS': False,
+        # 'DIRS': [os.path.join(BASE_DIR, 'frontend', 'build')],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -101,13 +102,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            'timeout': 30,
+        },
     }
 }
 
-import dj_database_url
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -143,9 +145,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -158,11 +160,10 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Or allow specific origins
 
 CORS_ORIGIN_WHITELIST = [
-    "https://heart-disease-prediction-webs.herokuapp.com",
     "http://127.0.0.1:3000",
     "http://127.0.0.1",
     "http://localhost:3000",
     "http://localhost"
 ]
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
