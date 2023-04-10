@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1885c9f3-1c0a-49a5-95d4-3d17a430545f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80e9bd7c-480f-41ce-bcca-27b7beb2cf82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80e9bd7c-480f-41ce-bcca-27b7beb2cf82.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/pages/PatientsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/pages/PatientsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles/view.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles/view.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +161,7 @@
       <workItem from="1680706262148" duration="1604000" />
       <workItem from="1680820345547" duration="1243000" />
       <workItem from="1680886034062" duration="3385000" />
-      <workItem from="1681050557237" duration="13694000" />
+      <workItem from="1681050557237" duration="14212000" />
     </task>
     <servers />
   </component>

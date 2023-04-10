@@ -410,88 +410,6 @@ class PatientForm extends React.Component {
         }
     }
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         first_name: "",
-    //         last_name: "",
-    //         HighBP: "",
-    //         HighChol: "",
-    //         CholCheck: "",
-    //         BMI: "",
-    //         Smoker: "",
-    //         Stroke: "",
-    //         Diabetes: "",
-    //         PhysActivity: "",
-    //         Fruits: "",
-    //         Veggies: "",
-    //         HvyAlcoholConsump: "",
-    //         AnyHealthcare: "",
-    //         NoDocbcCost: "",
-    //         GenHlth: "",
-    //         MentHlth: "",
-    //         PhysHlth: "",
-    //         DiffWalk: "",
-    //         Sex: "",
-    //         Age: "",
-    //         Education: "",
-    //         Income: "",
-    //     };
-    //     this.handleInputChange = this.handleInputChange.bind(this);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    // }
-    //
-    //
-    // handleSubmit(event) {
-    //     event.preventDefault();
-    //
-    //     // check if any required field is empty
-    //     const requiredFields = ["first_name", "last_name"];
-    //     for (const field of requiredFields) {
-    //         if (!this.state[field]) {
-    //             alert(`Please fill in the ${field} field`);
-    //             return;
-    //         }
-    //     }
-    //
-    //     const API_URL = "http://localhost:8000/api/submit-form/";
-    //
-    //     fetch(API_URL, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(this.state),
-    //     })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             console.log("Success:", data);
-    //         });
-    // }
-    //
-    // handleInputChange(event) {
-    //     const {name, value} = event.target;
-    //     if (
-    //         name === "HighBP" ||
-    //         name === "HighChol" ||
-    //         name === "CholCheck" ||
-    //         name === "Smoker" ||
-    //         name === "Stroke" ||
-    //         name === "PhysActivity" ||
-    //         name === "Fruits" ||
-    //         name === "Veggies" ||
-    //         name === "HvyAlcoholConsump" ||
-    //         name === "AnyHealthcare" ||
-    //         name === "NoDocbcCost" ||
-    //         name === "DiffWalk"
-    //     ) {
-    //         this.setState({...this.state, [name]: event.target.value === "true"});
-    //     } else {
-    //         this.setState({...this.state, [name]: value});
-    //     }
-    // }
-
-
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -739,7 +657,7 @@ class PatientForm extends React.Component {
                         <option value="8">8</option>
                     </select>
                 </div>
-                <Button type="submit" value="submit">Submit</Button>
+                <Button type="submit" href="/patientsList" value="submit">Submit</Button>
             </form>
         )
     }
