@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1885c9f3-1c0a-49a5-95d4-3d17a430545f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/predictor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/dt_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/dt_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/knn_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/knn_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/lr_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/lr_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/nb_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/nb_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/nn_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/nn_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/rf_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/rf_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/svm_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/ML/HDPrediction/myapp/savedModels/svm_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +174,8 @@
       <workItem from="1680706262148" duration="1604000" />
       <workItem from="1680820345547" duration="1243000" />
       <workItem from="1680886034062" duration="3385000" />
-      <workItem from="1681050557237" duration="14212000" />
+      <workItem from="1681050557237" duration="14310000" />
+      <workItem from="1681138981628" duration="6070000" />
     </task>
     <servers />
   </component>
@@ -188,7 +202,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Heart_Disease_Prediction$predictor.coverage" NAME="predictor Coverage Results" MODIFIED="1680888685874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ML/HDPrediction/myapp" />
+    <SUITE FILE_PATH="coverage/Heart_Disease_Prediction$predictor.coverage" NAME="predictor Coverage Results" MODIFIED="1681145388710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ML/HDPrediction/myapp" />
     <SUITE FILE_PATH="coverage/Heart_Disease_Prediction$views.coverage" NAME="views Coverage Results" MODIFIED="1680038029283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ML/HDPrediction/myapp" />
   </component>
 </project>

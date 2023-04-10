@@ -25,7 +25,7 @@ start_time = time.time()
 data = pd.read_csv("D:/Abelrahman/heart_disease_health_indicators_BRFSS2015.csv")
 
 # Split the data into features (X) and target (y)
-X = data.drop(['HeartDiseaseorAttack', 'Education', 'Income'], axis=1)  # drop these column
+X = data.drop(['HeartDiseaseorAttack', 'Education', 'Income', 'GenHlth', 'MentHlth'], axis=1)  # drop these column
 y = data['HeartDiseaseorAttack']  # output
 
 # Split the data into training, testing, and validation sets
@@ -132,31 +132,6 @@ joblib.dump(nb_model, 'savedModels/nb_model.joblib')
 joblib.dump(svm_model, 'savedModels/svm_model.joblib')
 joblib.dump(rf_model, 'savedModels/rf_model.joblib')
 joblib.dump(nn_model, 'savedModels/nn_model.joblib')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # from sklearn.model_selection import train_test_split
 # from sklearn.metrics import accuracy_score

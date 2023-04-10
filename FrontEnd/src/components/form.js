@@ -318,8 +318,30 @@
 import React from 'react';
 import '../styles/form.css'
 import {Button} from "react-bootstrap";
+// import {
+//     useLocation,
+//     useNavigate,
+//     useParams,
+// } from "react-router-dom";
+
+// function withRouter(Component) {
+//     function ComponentWithRouterProp(props) {
+//         let location = useLocation();
+//         let navigate = useNavigate();
+//         let params = useParams();
+//         return (
+//             <Component
+//                 {...props}
+//                 router={{location, navigate, params}}
+//             />
+//         );
+//     }
+//
+//     return ComponentWithRouterProp;
+// }
 
 class PatientForm extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -410,7 +432,9 @@ class PatientForm extends React.Component {
         }
     }
 
+
     render() {
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="form-control">
@@ -657,7 +681,7 @@ class PatientForm extends React.Component {
                         <option value="8">8</option>
                     </select>
                 </div>
-                <Button type="submit" href="/patientsList" value="submit">Submit</Button>
+                <Button type="submit" value="submit">Submit</Button>
             </form>
         )
     }
