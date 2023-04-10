@@ -102,26 +102,6 @@ const PatientsList = () => {
                                 <option value='submitted_time'>Sort by Submitted Time</option>
                             </Form.Select>
                         </div>
-                        {/*<div className='sort-buttons'>*/}
-                        {/*    <Button*/}
-                        {/*        className={`sort-button ${sortType === 'asc' && 'active'}`}*/}
-                        {/*        onClick={() => {*/}
-                        {/*            setSortType('asc');*/}
-                        {/*            sortPatientList(sortedColumn, 'asc');*/}
-                        {/*        }}*/}
-                        {/*    >*/}
-                        {/*        Ascending*/}
-                        {/*    </Button>*/}
-                        {/*    <Button*/}
-                        {/*        className={`sort-button ${sortType === 'desc' && 'active'}`}*/}
-                        {/*        onClick={() => {*/}
-                        {/*            setSortType('desc');*/}
-                        {/*            sortPatientList(sortedColumn, 'desc');*/}
-                        {/*        }}*/}
-                        {/*    >*/}
-                        {/*        Descending*/}
-                        {/*    </Button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
 

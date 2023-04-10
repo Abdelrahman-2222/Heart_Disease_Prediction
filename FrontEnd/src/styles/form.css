@@ -54,5 +54,5 @@ button {
 }
 
 input:required:invalid, select:required:invalid {
-  border-color: red;
+    border-color: red;
 }

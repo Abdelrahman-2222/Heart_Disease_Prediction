@@ -1,4 +1,3 @@
-import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -7,12 +6,15 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.feature_selection import SelectKBest, f_classif
 import numpy as np
+import pandas as pd
+import tensorflow as tf
+from tensorflow import keras
 
 import time
 
@@ -130,3 +132,103 @@ joblib.dump(nb_model, 'savedModels/nb_model.joblib')
 joblib.dump(svm_model, 'savedModels/svm_model.joblib')
 joblib.dump(rf_model, 'savedModels/rf_model.joblib')
 joblib.dump(nn_model, 'savedModels/nn_model.joblib')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import accuracy_score
+# from sklearn.preprocessing import StandardScaler, OneHotEncoder
+# from sklearn.neural_network import MLPClassifier
+# from sklearn.pipeline import make_pipeline
+# from sklearn.model_selection import GridSearchCV
+# from sklearn.feature_selection import SelectKBest, f_classif
+# import numpy as np
+# import pandas as pd
+#
+# import time
+#
+# import joblib
+#
+# # Read the dataset from Excel file
+# start_time = time.time()
+# data = pd.read_csv("D:/Abelrahman/heart_disease_health_indicators_BRFSS2015.csv").head(1000)
+#
+# # Split the data into features (X) and target (y)
+# X = data.drop(['HeartDiseaseorAttack', 'Education', 'Income'], axis=1)  # drop these column
+# y = data['HeartDiseaseorAttack']  # output
+#
+# # Split the data into training, testing, and validation sets
+# X_train, X_test_val, y_train, y_test_val = train_test_split(X, y, test_size=0.3, random_state=42)
+# X_test, X_val, y_test, y_val = train_test_split(X_test_val, y_test_val, test_size=0.33, random_state=42)
+#
+# # Feature Engineering
+# X['HighBP'] = np.where(X['Doctor told you high blood pressure'], 'Yes', 'No')
+# X['PhysActivity'] = np.where(X['Did not report any physical activity or exercise'], 'No', 'Yes')
+# X['Smoker'] = np.where(X['Currently smoke'], 'Yes', 'No')
+#
+# # One hot encoding for categorical variables
+# ohe = OneHotEncoder(sparse=False)
+# X_encoded = ohe.fit_transform(X[['Gender', 'Age', 'RaceEthnicity', 'MaritalStatus', 'EducationLevel', 'IncomeLevel',
+#                                  'HealthInsurance', 'Doctor told you high cholesterol', 'Doctor told you diabetes',
+#                                  'Doctor told you overweight or obese']])
+#
+# # Concatenate encoded features with numerical features
+# X_final = np.concatenate((X_encoded, X[
+#     ['Body Mass Index', 'Average Number of Alcoholic Drinks per Day', 'Doctor told you have a heart condition',
+#      'Doctor told you have a stroke', 'Doctor told you have angina']]), axis=1)
+#
+# # Split the data into training, testing, and validation sets
+# X_train, X_test, y_train, y_test = train_test_split(X_final, y, test_size=0.2, random_state=42)
+# X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=42)  # 60-20-20 split
+#
+# # Create pipeline for feature selection and model training
+# pipe = make_pipeline(
+#     StandardScaler(),
+#     SelectKBest(f_classif),
+#     MLPClassifier(hidden_layer_sizes=(50, 50, 50))
+# )
+#
+# # Define hyperparameters for grid search
+# param_grid = {
+#     'selectkbest__k': [10, 20, 30],
+#     'mlpclassifier__alpha': [0.0001, 0.001, 0.01],
+#     'mlpclassifier__max_iter': [200, 500, 1000]
+# }
+#
+# # Perform grid search with cross validation
+# grid_search = GridSearchCV(pipe, param_grid, cv=5, verbose=2, n_jobs=-1)
+# grid_search.fit(X_train, y_train)
+#
+# # Print the best hyperparameters and accuracy score on validation set
+# print("Best Hyperparameters: ", grid_search.best_params_)
+# print("Validation Accuracy: ", accuracy_score(y_val, grid_search.predict(X_val)))
+#
+# # Save the best model to disk
+# joblib.dump(grid_search.best_estimator_, 'savedModels/heart_disease_classifier.joblib')
+#
+# # Load the saved model from disk and evaluate on test set
+# model = joblib.load('heart_disease_classifier.joblib')
+# print("Test Accuracy: ", accuracy_score(y_test, model.predict(X_test)))

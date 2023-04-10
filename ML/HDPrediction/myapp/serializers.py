@@ -1,6 +1,5 @@
 from ML.HDPrediction.myapp.models import HeartDisease
 from rest_framework import serializers
-from .models import Task
 
 
 class HeartSerializer(serializers.ModelSerializer):
@@ -32,8 +31,3 @@ class HeartSerializerList(serializers.ModelSerializer):
     def get_submitted_time(self, obj):
         return obj.submitted_time.strftime('%d %b %Y')
 
-
-class TaskSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Task
-        fields = '__all__'
