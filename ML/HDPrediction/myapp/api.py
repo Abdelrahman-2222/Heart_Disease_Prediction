@@ -52,8 +52,7 @@ def apply_nn_model(sender, instance, created, **kwargs):
             [[instance.HighBP, instance.HighChol, instance.CholCheck, instance.BMI, instance.Smoker,
               instance.Stroke, instance.Diabetes, instance.PhysActivity, instance.Fruits,
               instance.Veggies, instance.HvyAlcoholConsump, instance.AnyHealthcare, instance.NoDocbcCost,
-              instance.GenHlth, instance.MentHlth, instance.PhysHlth, instance.DiffWalk,
-              1 if instance.Sex == 'M' else 0, instance.Age]])
+              instance.PhysHlth, instance.DiffWalk, 1 if instance.Sex == 'M' else 0, instance.Age]])
 
         # Make the prediction
         predicted_value = model.predict(X)[0]
