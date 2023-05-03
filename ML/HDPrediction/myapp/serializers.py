@@ -16,18 +16,16 @@ class HeartSerializer(serializers.ModelSerializer):
         'PhysActivity', 'Fruits', 'Veggies', 'HvyAlcoholConsump', 'AnyHealthcare', 'NoDocbcCost', 'GenHlth',
         'MentHlth', 'PhysHlth', 'DiffWalk', 'Sex', 'Age', 'Education', 'Income', 'result', 'submitted_time')
 
+    class HeartSerializerList(serializers.ModelSerializer):
+        prediction = serializers.SerializerMethodField()
+        submitted_time = serializers.SerializerMethodField()
 
-class HeartSerializerList(serializers.ModelSerializer):
-    prediction = serializers.SerializerMethodField()
-    submitted_time = serializers.SerializerMethodField()
+        class Meta:
+            model = HeartDisease
+            fields = ['first_name', 'last_name', 'HighBP', 'HighChol', 'prediction', 'submitted_time']
 
-    class Meta:
-        model = HeartDisease
-        fields = ['first_name', 'last_name', 'HighBP', 'HighChol', 'prediction', 'submitted_time']
+        def get_prediction(self, obj):
+            return obj.result
 
-    def get_prediction(self, obj):
-        return obj.result
-
-    def get_submitted_time(self, obj):
-        return obj.submitted_time.strftime('%d %b %Y')
-
+        def get_submitted_time(self, obj):
+            return obj.submitted_time.strftime('%d %b %Y')
